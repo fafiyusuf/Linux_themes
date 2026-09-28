@@ -1,0 +1,78 @@
+/* GNOME Shell theme — Cosmic Lavender
+ * Placed at: ~/.local/share/themes/aura-cosmic-lavender/gnome-shell/gnome-shell.css
+ *
+ * Requires the "User Themes" GNOME Shell extension to be active.
+ * Targets GNOME Shell 45+.
+ *
+ * Only overrides what can safely be changed.
+ * Does not restyle the entire Shell — that would risk breaking functionality.
+ */
+
+/* Panel */
+#panel {
+  background-color: rgba(17, 16, 26, 0.92);
+  border-bottom: 1px solid rgba(181, 140, 255, 0.12);
+}
+
+#panel .panel-button {
+  color: #F4EEFF;
+}
+
+#panel .panel-button:hover,
+#panel .panel-button:focus {
+  background-color: rgba(181, 140, 255, 0.12);
+  color: #E3C8FF;
+}
+
+/* Overview search */
+.search-entry {
+  background-color: rgba(25, 22, 37, 0.95);
+  border: 1px solid rgba(181, 140, 255, 0.25);
+  border-radius: 6px;
+  color: #F4EEFF;
+}
+
+.search-entry:focus {
+  border-color: rgba(181, 140, 255, 0.6);
+}
+
+/* App grid icons label */
+.icon-grid .overview-icon-with-label > .overview-icon {
+  background-color: transparent;
+}
+
+.dash-item-container > .overview-icon:hover {
+  background-color: rgba(181, 140, 255, 0.15);
+  border-radius: 8px;
+}
+
+/* Notifications */
+.notification-banner {
+  background-color: rgba(25, 22, 37, 0.96);
+  border: 1px solid rgba(181, 140, 255, 0.15);
+  border-radius: 8px;
+  color: #F4EEFF;
+}
+
+/* OSD (volume, brightness overlays) */
+.osd {
+  background-color: rgba(17, 16, 26, 0.90);
+  border: 1px solid rgba(181, 140, 255, 0.15);
+  border-radius: 8px;
+  color: #F4EEFF;
+}
+
+/* Calendar / quick settings dropdown */
+.calendar-today {
+  background-color: rgba(181, 140, 255, 0.2);
+  border-radius: 4px;
+  color: #B58CFF;
+  font-weight: bold;
+}
+
+/* Workspace switcher */
+.workspace-thumbnail-indicator {
+  background: rgba(181, 140, 255, 0.3);
+  border: 1px solid rgba(181, 140, 255, 0.5);
+  border-radius: 4px;
+}

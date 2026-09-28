@@ -13,6 +13,9 @@ export const themes = [
     gradient: 'linear-gradient(135deg, #11101A 0%, #2D1B69 50%, #1a0a2e 100%)',
     accentColor: '#B58CFF',
     textColor: '#F4EEFF',
+    // localPath: absolute path to the extracted theme package for the real engine.
+    // In production this would be resolved from the installed themes directory.
+    localPath: '/home/newuser/Projects/Linux Themes/aura/themes/cosmic-lavender',
     components: { wallpaper: true, colors: true, icons: true, cursor: true, gtk: true, gnome: true, terminal: true },
     colors: {
       background: '#11101A',

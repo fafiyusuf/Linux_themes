@@ -1,0 +1,17 @@
+[Icon Theme]
+Name=Aura Cosmic Lavender
+Comment=Icon theme for the Cosmic Lavender desktop aesthetic
+Inherits=Adwaita,hicolor
+Directories=apps/scalable,apps/48
+
+[apps/scalable]
+Size=48
+Type=Scalable
+MinSize=8
+MaxSize=512
+Context=Applications
+
+[apps/48]
+Size=48
+Type=Fixed
+Context=Applications

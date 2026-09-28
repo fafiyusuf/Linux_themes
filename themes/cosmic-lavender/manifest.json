@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cosmic-lavender",
+  "name": "Cosmic Lavender",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aura Studio"
+  },
+  "description": "A deep-space lavender aesthetic. Soft purples and cosmic darkness.",
+  "categories": ["space", "purple", "dark", "aesthetic"],
+  "style": ["Dark", "Purple"],
+  "components": {
+    "wallpaper": true,
+    "colors": true,
+    "icons": true,
+    "cursor": true,
+    "gtk": true,
+    "gnome": true,
+    "terminal": true
+  }
+}

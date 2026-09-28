@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Files app icon — Cosmic Lavender palette -->
+  <rect x="4" y="4" width="40" height="40" rx="8" fill="#191625"/>
+  <!-- Folder body -->
+  <path d="M8 20 Q8 16 12 16 H22 L25 13 H38 Q42 13 42 17 V36 Q42 40 38 40 H12 Q8 40 8 36 Z"
+        fill="#7B61C9" opacity="0.85"/>
+  <path d="M8 22 H42 V36 Q42 40 38 40 H12 Q8 40 8 36 Z"
+        fill="#B58CFF" opacity="0.6"/>
+  <!-- File lines inside -->
+  <rect x="14" y="27" width="20" height="2" rx="1" fill="#F4EEFF" opacity="0.7"/>
+  <rect x="14" y="32" width="14" height="2" rx="1" fill="#F4EEFF" opacity="0.45"/>
+</svg>
