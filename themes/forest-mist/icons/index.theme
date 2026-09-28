@@ -1,6 +1,6 @@
 [Icon Theme]
-Name=Aura Cosmic Lavender
-Comment=Aura icon theme for cosmic-lavender
+Name=Aura Forest Mist
+Comment=Aura icon theme for forest-mist
 Inherits=Adwaita,hicolor
 Directories=apps/scalable,places/scalable,status/scalable
 

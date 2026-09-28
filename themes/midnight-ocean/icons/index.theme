@@ -1,6 +1,6 @@
 [Icon Theme]
-Name=Aura Cosmic Lavender
-Comment=Aura icon theme for cosmic-lavender
+Name=Aura Midnight Ocean
+Comment=Aura icon theme for midnight-ocean
 Inherits=Adwaita,hicolor
 Directories=apps/scalable,places/scalable,status/scalable
 

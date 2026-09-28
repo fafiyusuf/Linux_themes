@@ -132,26 +132,50 @@ function applyIcons(themeDir, manifest) {
   ensureDir(ICONS_DIR);
   copyDir(iconSrc, dest);
 
-  // Write an index.theme if not present
+  // If the bundle didn't include an index.theme, write a minimal fallback.
+  // In practice our bundles always ship one (with apps/scalable, places/scalable, status/scalable).
   const indexTheme = path.join(dest, 'index.theme');
   if (!fs.existsSync(indexTheme)) {
     fs.writeFileSync(indexTheme, [
       '[Icon Theme]',
       `Name=${manifest.name}`,
       `Comment=Icon theme from Aura package ${manifest.id}`,
-      'Inherits=hicolor',
-      'Directories=apps',
+      'Inherits=Adwaita,hicolor',
+      'Directories=apps/scalable,places/scalable,status/scalable',
       '',
-      '[apps]',
+      '[apps/scalable]',
       'Size=48',
       'Type=Scalable',
       'MinSize=8',
       'MaxSize=512',
+      'Context=Applications',
+      '',
+      '[places/scalable]',
+      'Size=48',
+      'Type=Scalable',
+      'MinSize=8',
+      'MaxSize=512',
+      'Context=Places',
+      '',
+      '[status/scalable]',
+      'Size=48',
+      'Type=Scalable',
+      'MinSize=8',
+      'MaxSize=512',
+      'Context=Status',
     ].join('\n'), 'utf8');
   }
 
   gsSet('org.gnome.desktop.interface', 'icon-theme', `'${themeName}'`);
+
+  // Tell GTK icon caches to refresh
+  try {
+    const { execSync } = require('child_process');
+    execSync(`gtk-update-icon-cache -f -t "${dest}" 2>/dev/null || true`, { stdio: 'ignore', timeout: 10000 });
+  } catch {}
+
   return `Icon theme installed: ${themeName}`;
+
 }
 
 function applyCursor(themeDir, manifest) {

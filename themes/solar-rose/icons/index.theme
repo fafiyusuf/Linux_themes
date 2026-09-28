@@ -1,6 +1,6 @@
 [Icon Theme]
-Name=Aura Cosmic Lavender
-Comment=Aura icon theme for cosmic-lavender
+Name=Aura Solar Rose
+Comment=Aura icon theme for solar-rose
 Inherits=Adwaita,hicolor
 Directories=apps/scalable,places/scalable,status/scalable
 

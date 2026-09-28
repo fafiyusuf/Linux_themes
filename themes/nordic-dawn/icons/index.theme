@@ -1,6 +1,6 @@
 [Icon Theme]
-Name=Aura Cosmic Lavender
-Comment=Aura icon theme for cosmic-lavender
+Name=Aura Nordic Dawn
+Comment=Aura icon theme for nordic-dawn
 Inherits=Adwaita,hicolor
 Directories=apps/scalable,places/scalable,status/scalable
 

@@ -1,6 +1,6 @@
 [Icon Theme]
-Name=Aura Cosmic Lavender
-Comment=Aura icon theme for cosmic-lavender
+Name=Aura Cyberpunk Neon
+Comment=Aura icon theme for cyberpunk-neon
 Inherits=Adwaita,hicolor
 Directories=apps/scalable,places/scalable,status/scalable
 
