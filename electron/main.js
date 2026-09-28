@@ -2,7 +2,7 @@
  * electron/main.js
  * Electron main process entry point.
  *
- * In development: loads the Vite dev server at localhost:5173
+ * In development: loads the Vite dev server (port 5173, or VITE_DEV_SERVER_URL if set)
  * In production: loads the built index.html from dist/
  */
 
@@ -13,7 +13,8 @@ const path = require('path');
 const { registerHandlers } = require('./ipc/handlers.js');
 
 const isDev = process.env.NODE_ENV !== 'production';
-const DEV_URL = 'http://localhost:5173';
+// Vite may pick a different port if 5173 is busy — allow override via env
+const DEV_URL = process.env.VITE_DEV_SERVER_URL || 'http://localhost:5173';
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -23,6 +24,7 @@ function createWindow() {
     minHeight: 600,
     title: 'Aura',
     backgroundColor: '#111114',
+    show: false,            // prevent blank flash before content loads
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
@@ -40,6 +42,13 @@ function createWindow() {
   } else {
     win.loadFile(path.join(__dirname, '..', 'dist', 'index.html'));
   }
+
+  // Show window once content is ready — prevents white flash and
+  // fixes Wayland windows that appear to open and immediately close
+  win.once('ready-to-show', () => {
+    win.show();
+    win.focus();
+  });
 
   return win;
 }

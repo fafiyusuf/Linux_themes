@@ -9,7 +9,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "electron": "NODE_ENV=production electron .",
-    "electron:dev": "concurrently -k -n VITE,ELECTRON -c cyan,magenta \"vite --port 5173 --strictPort\" \"wait-on http://localhost:5173 && NODE_ENV=development electron .\"",
+    "preelectron:dev": "pkill -f 'vite' || true; pkill -f 'electron' || true; sleep 0.5",
+    "electron:dev": "concurrently -k -n VITE,ELECTRON -c cyan,magenta \"vite\" \"wait-on http://localhost:5173 && ELECTRON_OZONE_PLATFORM_HINT=auto NODE_ENV=development electron .\"",
     "lint": "oxlint"
   },
   "dependencies": {
