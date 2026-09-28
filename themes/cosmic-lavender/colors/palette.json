@@ -1,11 +1,6 @@
 {
-  "background":  "#11101A",
-  "surface":     "#191625",
-  "foreground":  "#F4EEFF",
-  "primary":     "#B58CFF",
-  "secondary":   "#7B61C9",
-  "accent":      "#E3C8FF",
-  "success":     "#8FD694",
-  "warning":     "#F5C77A",
-  "error":       "#F28B82"
+  "accent": "#B58CFF",
+  "bg": "#11101A",
+  "fg": "#FFFFFF",
+  "surface": "#11101A"
 }

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "solar-rose",
+  "name": "Solar Rose",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aura Studio"
+  },
+  "description": "Official Solar Rose desktop theme package.",
+  "categories": [
+    "aesthetic",
+    "solar-rose"
+  ],
+  "style": [
+    "Dark"
+  ],
+  "components": {
+    "wallpaper": true,
+    "colors": true,
+    "icons": false,
+    "cursor": false,
+    "gtk": true,
+    "gnome": false,
+    "terminal": true
+  }
+}

@@ -40,10 +40,19 @@ export default function LibraryPage({ themes, appliedTheme, onSelect, onApply, o
                 <span className="library-section-title">Currently Applied</span>
               </div>
               <div className="applied-panel">
-                <div
-                  className="applied-panel-preview"
-                  style={{ background: appliedTheme.gradient }}
-                />
+                {appliedTheme.wallpaper ? (
+                  <img
+                    src={appliedTheme.wallpaper}
+                    alt={appliedTheme.name}
+                    className="applied-panel-preview-img"
+                    draggable={false}
+                  />
+                ) : (
+                  <div
+                    className="applied-panel-preview"
+                    style={{ background: appliedTheme.gradient }}
+                  />
+                )}
                 <div className="applied-panel-body">
                   <div className="applied-panel-info">
                     <div className="applied-panel-status">Active</div>
@@ -90,10 +99,19 @@ export default function LibraryPage({ themes, appliedTheme, onSelect, onApply, o
                     onKeyDown={e => e.key === 'Enter' && setSelected(theme)}
                   >
                     <div className="theme-row-preview">
-                      <div
-                        className="theme-row-preview-gradient"
-                        style={{ background: theme.gradient }}
-                      />
+                      {theme.wallpaper ? (
+                        <img
+                          src={theme.wallpaper}
+                          alt={theme.name}
+                          className="theme-row-preview-img"
+                          draggable={false}
+                        />
+                      ) : (
+                        <div
+                          className="theme-row-preview-gradient"
+                          style={{ background: theme.gradient }}
+                        />
+                      )}
                     </div>
                     <div className="theme-row-info">
                       <div className="theme-row-name">{theme.name}</div>

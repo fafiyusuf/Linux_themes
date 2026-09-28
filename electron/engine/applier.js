@@ -56,7 +56,7 @@ function ensureDir(p) {
 function applyWallpaper(themeDir, manifest) {
   const wallpaperDir = path.join(themeDir, 'wallpaper');
   const files = fs.readdirSync(wallpaperDir)
-    .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f));
+    .filter(f => /\.(jpg|jpeg|png|webp|svg)$/i.test(f));
 
   if (files.length === 0) throw new Error('No wallpaper image found in wallpaper/ directory');
 

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "ember-dusk",
+  "name": "Ember Dusk",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aura Studio"
+  },
+  "description": "Official Ember Dusk desktop theme package.",
+  "categories": [
+    "aesthetic",
+    "ember-dusk"
+  ],
+  "style": [
+    "Dark"
+  ],
+  "components": {
+    "wallpaper": true,
+    "colors": true,
+    "icons": false,
+    "cursor": false,
+    "gtk": true,
+    "gnome": false,
+    "terminal": true
+  }
+}

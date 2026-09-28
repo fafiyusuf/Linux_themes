@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "midnight-ocean",
+  "name": "Midnight Ocean",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aura Studio"
+  },
+  "description": "Official Midnight Ocean desktop theme package.",
+  "categories": [
+    "aesthetic",
+    "midnight-ocean"
+  ],
+  "style": [
+    "Dark"
+  ],
+  "components": {
+    "wallpaper": true,
+    "colors": true,
+    "icons": false,
+    "cursor": false,
+    "gtk": true,
+    "gnome": false,
+    "terminal": true
+  }
+}

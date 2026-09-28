@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "cyberpunk-neon",
+  "name": "Cyberpunk Neon",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aura Studio"
+  },
+  "description": "Official Cyberpunk Neon desktop theme package.",
+  "categories": [
+    "aesthetic",
+    "cyberpunk-neon"
+  ],
+  "style": [
+    "Dark"
+  ],
+  "components": {
+    "wallpaper": true,
+    "colors": true,
+    "icons": false,
+    "cursor": false,
+    "gtk": true,
+    "gnome": false,
+    "terminal": true
+  }
+}

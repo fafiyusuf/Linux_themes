@@ -162,12 +162,21 @@ function ThemeRow({ theme, isSelected, onSelect, onInstall, onApply }) {
       tabIndex={0}
       onKeyDown={e => e.key === 'Enter' && onSelect()}
     >
-      {/* Color preview */}
+      {/* Wallpaper preview thumbnail */}
       <div className="theme-row-preview">
-        <div
-          className="theme-row-preview-gradient"
-          style={{ background: theme.gradient }}
-        />
+        {theme.wallpaper ? (
+          <img
+            src={theme.wallpaper}
+            alt={theme.name}
+            className="theme-row-preview-img"
+            draggable={false}
+          />
+        ) : (
+          <div
+            className="theme-row-preview-gradient"
+            style={{ background: theme.gradient }}
+          />
+        )}
       </div>
 
       {/* Info */}

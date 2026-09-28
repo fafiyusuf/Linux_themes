@@ -6,16 +6,21 @@
   "author": {
     "name": "Aura Studio"
   },
-  "description": "A deep-space lavender aesthetic. Soft purples and cosmic darkness.",
-  "categories": ["space", "purple", "dark", "aesthetic"],
-  "style": ["Dark", "Purple"],
+  "description": "Official Cosmic Lavender desktop theme package.",
+  "categories": [
+    "aesthetic",
+    "cosmic-lavender"
+  ],
+  "style": [
+    "Dark"
+  ],
   "components": {
     "wallpaper": true,
     "colors": true,
-    "icons": true,
-    "cursor": true,
+    "icons": false,
+    "cursor": false,
     "gtk": true,
-    "gnome": true,
+    "gnome": false,
     "terminal": true
   }
 }

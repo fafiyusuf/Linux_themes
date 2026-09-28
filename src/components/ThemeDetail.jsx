@@ -16,12 +16,26 @@ export default function ThemeDetail({ theme, onInstall, onApply, onRemove }) {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-      {/* Preview */}
-      <div className="detail-preview">
-        <div
-          className="detail-preview-gradient"
-          style={{ background: theme.gradient }}
-        />
+      {/* Preview hero — wallpaper photo or gradient fallback */}
+      <div className="detail-preview" style={{ position: 'relative', overflow: 'hidden' }}>
+        {theme.wallpaper ? (
+          <img
+            src={theme.wallpaper}
+            alt={theme.name}
+            style={{
+              position: 'absolute', inset: 0,
+              width: '100%', height: '100%',
+              objectFit: 'cover',
+              display: 'block',
+            }}
+            draggable={false}
+          />
+        ) : (
+          <div
+            className="detail-preview-gradient"
+            style={{ background: theme.gradient }}
+          />
+        )}
         <div className="detail-preview-overlay" />
       </div>
 
@@ -70,6 +84,26 @@ export default function ThemeDetail({ theme, onInstall, onApply, onRemove }) {
             ))}
           </div>
         </div>
+
+        {/* Icon preview — only shown when the theme ships icons */}
+        {theme.icons && theme.icons.length > 0 && (
+          <div className="detail-section">
+            <div className="detail-section-label">Icons Preview</div>
+            <div className="icon-preview-strip">
+              {theme.icons.map(icon => (
+                <div key={icon.name} className="icon-preview-item">
+                  <img
+                    src={icon.src}
+                    alt={icon.name}
+                    className="icon-preview-img"
+                    draggable={false}
+                  />
+                  <span className="icon-preview-label">{icon.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Components */}
         <div className="detail-section">

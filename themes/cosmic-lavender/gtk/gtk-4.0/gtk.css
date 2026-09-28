@@ -1,42 +1,4 @@
-/* gtk-4.0/gtk.css — Cosmic Lavender GTK4 Theme
- *
- * Targets GTK4 + libadwaita applications.
- * Note: libadwaita apps control some of their own styling independently.
- * This file handles what CAN be themed via the gtk-theme gsettings key.
- *
- * Color variables from the Cosmic Lavender palette:
- *   Background:  #11101A
- *   Surface:     #191625
- *   Foreground:  #F4EEFF
- *   Primary:     #B58CFF
- *   Secondary:   #7B61C9
- *   Accent:      #E3C8FF
- */
-
-@define-color accent_bg_color  #B58CFF;
-@define-color accent_fg_color  #11101A;
-@define-color accent_color     #B58CFF;
-
-@define-color window_bg_color       #11101A;
-@define-color window_fg_color       #F4EEFF;
-@define-color view_bg_color         #191625;
-@define-color view_fg_color         #F4EEFF;
-@define-color headerbar_bg_color    #191625;
-@define-color headerbar_fg_color    #F4EEFF;
-@define-color headerbar_shade_color rgba(0, 0, 0, 0.3);
-@define-color card_bg_color         rgba(255, 255, 255, 0.04);
-@define-color card_fg_color         #F4EEFF;
-@define-color sidebar_bg_color      #11101A;
-@define-color sidebar_fg_color      #F4EEFF;
-@define-color popover_bg_color      #1E1C2E;
-@define-color popover_fg_color      #F4EEFF;
-
-@define-color error_color           #F28B82;
-@define-color warning_color         #F5C77A;
-@define-color success_color         #8FD694;
-
-/* Selection */
-selection {
-  background-color: #B58CFF;
-  color: #11101A;
-}
+/* Cosmic Lavender GTK 4 Theme */
+@define-color accent_color #B58CFF;
+@define-color accent_bg_color #B58CFF;
+@define-color window_bg_color #11101A;
